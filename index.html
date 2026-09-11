@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JUST TRY — Top Up Game Termurah</title>
+    <title>JUST TRY — Sayur & Buah Segar untuk Hotel, Villa & Restoran</title>
     <style>
         * {
             margin: 0;
@@ -12,128 +12,209 @@
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
         body {
-            background-color: #0f172a;
-            color: white;
+            background-color: #f8faf5;
+            color: #333;
         }
+        /* Header & Navigasi */
         header {
-            background: #1e293b;
+            background: #ffffff;
             padding: 15px 30px;
             display: flex;
             justify-content: space-between;
             align-items: center;
             flex-wrap: wrap;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            position: sticky;
+            top: 0;
+            z-index: 100;
         }
         .logo {
-            font-size: 24px;
+            font-size: 26px;
             font-weight: bold;
-            color: #facc15;
+            color: #2e7d32;
+            text-decoration: none;
+        }
+        .logo span {
+            color: #f57c00;
         }
         .nav-links a {
-            color: white;
+            color: #444;
             text-decoration: none;
             margin: 0 12px;
-            font-size: 14px;
+            font-size: 15px;
+            font-weight: 500;
+            transition: 0.3s;
         }
         .nav-links a:hover {
-            color: #facc15;
+            color: #2e7d32;
         }
-        .auth-btn a {
-            background: #facc15;
-            color: #000;
-            padding: 8px 16px;
+        .cta-btn a {
+            background: #2e7d32;
+            color: white;
+            padding: 10px 20px;
             border-radius: 6px;
             text-decoration: none;
             font-weight: bold;
             margin-left: 8px;
+            transition: 0.3s;
         }
+        .cta-btn a:hover {
+            background: #27652b;
+        }
+        /* Banner Utama */
         .banner {
-            background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
-            margin: 20px;
-            border-radius: 12px;
-            padding: 40px;
+            background: linear-gradient(135deg, #4caf50 0%, #66bb6a 100%);
+            margin: 25px;
+            border-radius: 16px;
+            padding: 50px 30px;
             text-align: center;
-            border: 2px solid #facc15;
+            color: white;
         }
         .banner h1 {
             font-size: 36px;
-            color: #facc15;
-            margin-bottom: 10px;
+            margin-bottom: 15px;
         }
         .banner p {
             font-size: 18px;
-            color: #cbd5e1;
-            margin-bottom: 20px;
+            max-width: 700px;
+            margin: 0 auto 25px;
+            opacity: 0.95;
+            line-height: 1.6;
         }
         .btn-primary {
-            background: #facc15;
-            color: #000;
-            padding: 12px 30px;
+            background: #ff9800;
+            color: white;
+            padding: 14px 35px;
             border-radius: 8px;
             text-decoration: none;
             font-weight: bold;
-            font-size: 16px;
+            font-size: 17px;
+            transition: 0.3s;
+            display: inline-block;
         }
+        .btn-primary:hover {
+            background: #fb8c00;
+            transform: translateY(-2px);
+        }
+        /* Keunggulan */
+        .features {
+            padding: 30px 25px;
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+        }
+        .feature-box {
+            text-align: center;
+            padding: 25px;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+        }
+        .feature-box h3 {
+            color: #2e7d32;
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+        .feature-box p {
+            color: #666;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+        /* Judul Bagian */
         .section-title {
             margin: 40px 30px 20px;
-            font-size: 22px;
-            border-left: 4px solid #facc15;
+            font-size: 24px;
+            color: #2e7d32;
+            border-left: 5px solid #ff9800;
             padding-left: 12px;
         }
+        /* Kategori Produk */
         .container {
-            padding: 0 20px 40px;
+            padding: 0 25px 50px;
             max-width: 1200px;
             margin: 0 auto;
         }
         .grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
         }
         .card {
-            background: #1e293b;
-            border-radius: 12px;
-            padding: 20px;
+            background: white;
+            border-radius: 14px;
+            padding: 30px 25px;
             text-align: center;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.06);
             transition: transform 0.3s;
-            border: 1px solid transparent;
         }
         .card:hover {
             transform: translateY(-5px);
-            border-color: #facc15;
         }
         .card img {
-            width: 80px;
-            height: 80px;
+            width: 90px;
+            height: 90px;
             object-fit: contain;
-            margin-bottom: 15px;
-            border-radius: 8px;
-            background: #334155;
-            padding: 8px;
+            margin-bottom: 18px;
         }
         .card h3 {
-            font-size: 18px;
-            margin-bottom: 5px;
+            font-size: 20px;
+            color: #2e7d32;
+            margin-bottom: 10px;
         }
         .card p {
-            color: #94a3b8;
+            color: #666;
             font-size: 14px;
             margin-bottom: 15px;
+            line-height: 1.5;
         }
         .card button {
-            background: #facc15;
-            color: #000;
+            background: #2e7d32;
+            color: white;
             border: none;
-            padding: 8px 20px;
+            padding: 10px 25px;
             border-radius: 6px;
             font-weight: bold;
             cursor: pointer;
-            width: 100%;
+            font-size: 15px;
+            transition: 0.3s;
         }
+        .card button:hover {
+            background: #27652b;
+        }
+        /* CTA Pesan */
+        .order-section {
+            background: #f1f8e9;
+            border-radius: 14px;
+            padding: 40px 25px;
+            text-align: center;
+            margin: 30px 25px 50px;
+        }
+        .order-section h2 {
+            color: #2e7d32;
+            font-size: 26px;
+            margin-bottom: 15px;
+        }
+        .order-section p {
+            font-size: 16px;
+            color: #555;
+            margin-bottom: 25px;
+        }
+        .contact-info {
+            font-size: 18px;
+            color: #333;
+            line-height: 2;
+        }
+        .contact-info strong {
+            color: #2e7d32;
+        }
+        /* Footer */
         footer {
-            background: #1e293b;
+            background: #263238;
             text-align: center;
             padding: 30px;
-            color: #94a3b8;
+            color: #ccc;
             font-size: 14px;
         }
     </style>
@@ -142,73 +223,98 @@
 
 <!-- Header / Navigasi -->
 <header>
-    <div class="logo">JUST TRY</div>
+    <a href="#" class="logo">JUST <span>TRY</span></a>
     <nav class="nav-links">
-        <a href="#">Topup</a>
-        <a href="#">Cek Transaksi</a>
-        <a href="#">Leaderboard</a>
-        <a href="#">Artikel</a>
-        <a href="#">Kalkulator</a>
+        <a href="#">Beranda</a>
+        <a href="#">Produk</a>
+        <a href="#">Tentang Kami</a>
+        <a href="#">Cara Pesan</a>
+        <a href="#">Kontak</a>
     </nav>
-    <div class="auth-btn">
-        <a href="#">Masuk</a>
-        <a href="#" style="background:#facc15">Daftar</a>
+    <div class="cta-btn">
+        <a href="#">📞 Pesan Sekarang</a>
     </div>
 </header>
 
 <!-- Banner Utama -->
 <div class="banner">
-    <h1>⭐ SELAMAT DATANG DI JUST TRY!</h1>
-    <p>Top Up Game — Cepat, Murah, & Terpercaya!</p>
-    <a href="#" class="btn-primary">MULAI TOP UP</a>
+    <h1>🥬 SAYUR & BUAH SEGAR 🍊</h1>
+    <p>Supplier terpercaya untuk Hotel, Villa, & Restoran. Produk segar setiap hari, harga grosir, dan pengiriman tepat waktu ke seluruh Bali!</p>
+    <a href="#" class="btn-primary">📋 Daftar Harga & Pesan</a>
 </div>
 
-<!-- Bagian Produk Populer -->
-<h2 class="section-title">🔥 POPULER SEKARANG!</h2>
+<!-- Keunggulan -->
+<div class="features">
+    <div class="feature-box">
+        <h3>🌿 Segar & Berkualitas</h3>
+        <p>Langung dari petani, dipilih setiap pagi — kesegaran terjamin!</p>
+    </div>
+    <div class="feature-box">
+        <h3>💰 Harga Grosir</h3>
+        <p>Harga khusus untuk bisnis — lebih hemat untuk kebutuhan harian</p>
+    </div>
+    <div class="feature-box">
+        <h3>🚚 Pengiriman Tepat</h3>
+        <p>Antar setiap pagi sesuai jadwal — tidak telat, selalu siap!</p>
+    </div>
+    <div class="feature-box">
+        <h3>✅ Standar Hotel</h3>
+        <p>Kualitas premium sesuai standar kebutuhan restoran & hotel</p>
+    </div>
+</div>
+
+<!-- Kategori Produk -->
+<h2 class="section-title">📦 KATEGORI PRODUK KAMI</h2>
 <div class="container">
     <div class="grid">
+        <!-- Sayuran -->
         <div class="card">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Mobile_Legends_Logo.png/200px-Mobile_Legends_Logo.png" alt="Mobile Legends">
-            <h3>Mobile Legends</h3>
-            <p>Moonton</p>
-            <button>Top Up</button>
+            <img src="https://cdn-icons-png.flaticon.com/512/2915/2915408.png" alt="Sayuran">
+            <h3>🥬 Sayuran Segar</h3>
+            <p>Bayam, kangkung, sawi, selada, tomat, wortel, bawang, cabai & lengkap lainnya</p>
+            <button>Lihat Daftar</button>
         </div>
+        <!-- Buah-buahan -->
         <div class="card">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Magic_Chess_Logo.png/200px-Magic_Chess_Logo.png" alt="Magic Chess">
-            <h3>Magic Chess Go Go</h3>
-            <p>Vizta Games</p>
-            <button>Top Up</button>
+            <img src="https://cdn-icons-png.flaticon.com/512/3081/3081742.png" alt="Buah-buahan">
+            <h3>🍎 Buah-buahan</h3>
+            <p>Pisang, pepaya, mangga, jeruk, semangka, nanas, kelengkeng & buah musiman</p>
+            <button>Lihat Daftar</button>
         </div>
+        <!-- Bumbu Dapur -->
         <div class="card">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/PUBG_Mobile_Logo.png/200px-PUBG_Mobile_Logo.png" alt="PUBG">
-            <h3>PUBG Mobile</h3>
-            <p>Tencent Games</p>
-            <button>Top Up</button>
+            <img src="https://cdn-icons-png.flaticon.com/512/2738/2738658.png" alt="Bumbu Dapur">
+            <h3>🧄 Bumbu Dapur</h3>
+            <p>Bawang merah, bawang putih, jahe, kunyit, lengkuas, ketumbar & lengkap</p>
+            <button>Lihat Daftar</button>
         </div>
+        <!-- Pesanan Khusus -->
         <div class="card">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Free_Fire_Logo.png/200px-Free_Fire_Logo.png" alt="Free Fire">
-            <h3>Free Fire</h3>
-            <p>Garena</p>
-            <button>Top Up</button>
-        </div>
-        <div class="card">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/Valorant_logo.svg/200px-Valorant_logo.svg.png" alt="Valorant">
-            <h3>Valorant</h3>
-            <p>Riot Games</p>
-            <button>Top Up</button>
-        </div>
-        <div class="card">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Roblox_logo.svg/200px-Roblox_logo.svg.png" alt="Roblox">
-            <h3>ROBLOX</h3>
-            <p>Roblox Corporation</p>
-            <button>Top Up</button>
+            <img src="https://cdn-icons-png.flaticon.com/512/3140/3140195.png" alt="Pesanan Khusus">
+            <h3>📋 Pesanan Khusus</h3>
+            <p>Butuh jenis sayur/buah tertentu dalam jumlah besar? Kami siap sediakan!</p>
+            <button>Hubungi Kami</button>
         </div>
     </div>
 </div>
 
+<!-- Bagian Pesan -->
+<div class="order-section">
+    <h2>📞 SIAP SUPPLY KEBUTUHAN HOTEL, VILLA & RESTORAN ANDA!</h2>
+    <p>Hubungi kami untuk daftar harga lengkap, sampel produk, dan jadwal pengiriman rutin setiap hari.</p>
+    <div class="contact-info">
+        <p><strong>📱 WhatsApp:</strong> 08xx-xxxx-xxxx</p>
+        <p><strong>📍 Lokasi:</strong> [Isi Alamat Lengkap, Bali]</p>
+        <p><strong>⏰ Jam Operasional:</strong> Senin–Minggu, 06.00–18.00 WITA</p>
+    </div>
+    <br>
+    <a href="https://wa.me/628xxxxxxxxx" target="_blank" class="btn-primary">💬 Klik untuk WhatsApp</a>
+</div>
+
 <!-- Footer -->
 <footer>
-    <p>© 2025 JUST TRY — Semua Hak Dilindungi</p>
+    <p>© 2025 JUST TRY — Supplier Sayur & Buah Segar untuk Hotel, Villa & Restoran di Bali</p>
+    <p>Semua Hak Dilindungi | Melayani pengiriman ke seluruh Bali</p>
 </footer>
 
 </body>
